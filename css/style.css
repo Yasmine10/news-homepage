@@ -172,7 +172,7 @@ body.no-scroll {
 
     cursor: pointer;
 
-    transition: all 400ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .btn--primary {
@@ -180,7 +180,7 @@ body.no-scroll {
     color: var(--clr-neutral-100);
 }
 .btn--primary:hover,
-.btn--primary:focus-visible {
+.btn--primary:focus-within {
     background-color: var(--clr-neutral-900);
 }
 
@@ -297,7 +297,6 @@ body.no-scroll {
         position: fixed;
         top: 0;
         bottom: 0;
-        /* right: -16px; */
         right: 0;
         z-index: 10;
 
@@ -341,7 +340,7 @@ body.no-scroll {
 
     .header-primary.show {
         position: relative;
-        /* overflow: visible; */
+
         overflow-y: visible;
     }
 }
@@ -431,8 +430,15 @@ body.no-scroll {
     border-bottom: 1px solid var(--clr-neutral-400);
 }
 
+.new-articles__item:hover .title,
+.new-articles__item:focus-within .title {
+    color: var(--clr-primary-300);
+}
+
 .new-articles__item .title {
     margin-bottom: 8px;
+
+    transition: all 300ms ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -449,6 +455,11 @@ body.no-scroll {
     gap: 32px;
 
     margin-bottom: 80px;
+}
+
+.best-articles__item:hover .title,
+.best-articles__item:focus-within .title {
+    color: var(--clr-primary-500);
 }
 
 .best-articles__item-link {
@@ -473,6 +484,8 @@ body.no-scroll {
 
 .best-articles__item .title {
     margin-block: 12px 9px;
+
+    transition: all 300ms ease-in-out;
 }
 
 @media (min-width: 768px) {
