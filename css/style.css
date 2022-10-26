@@ -195,10 +195,14 @@ body.no-scroll {
     max-width: 1110px;
     margin-inline: auto;
 
-    display: flex;
-    justify-content: space-between;
+    
 
     padding-block: 89px 55.1px;
+}
+
+.header-primary > nav {
+    display: flex;
+    justify-content: space-between;
 }
 
 .burger {
